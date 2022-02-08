@@ -1,4 +1,4 @@
-# Siren TF : Implicit Neural Representations with Periodic Activation Functions
+# Siren: Implicit Neural Representations with Periodic Activation Functions
 
 The unofficial Tensorflow 2 implementation of the paper Implicit Neural Representations with Periodic Activation Functions. Please note that, this repo tested with image fitting experiments.
 
@@ -14,19 +14,23 @@ conda env create --file setup/environment.yaml
 
 ## Training
 ```sh
-python main.py --is_train --input_image samples/durham_mcs.jpg  --output_dir results/ 
+python main.py --train --input_image samples/durham_mcs.jpg --model_name siren --output_dir results/durham_mcs,
 ```
 
 ## Testing
 
 ```sh
-python main.py --input_image samples/durham_mcs.jpg --output_dir results/ 
+python main.py --input_image samples/durham_mcs.jpg --model_name siren --output_dir results/durham_mcs/
 ```
 
 ## Results
 
-![example 1](/results/istanbul_airport.png)
-![example 2](/results/leaves.png)
+|   |   |
+|---|---|
+| ![](/results/istanbul_airport.png) | ![](/results/leaves.png)    |
+| ![](/results/face.png)   |![](/results/stone_nsm.png)   |
+
+
 
 ## References
 
