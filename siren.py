@@ -64,7 +64,7 @@ class Siren(tf.keras.Model):
 
         if outermost_linear:
             final_linear = tf.keras.layers.Dense(
-                out_features, kernel_initializer=SineInitializer(hidden_omega)
+                units=out_features, kernel_initializer=SineInitializer(hidden_omega)
             )
             self.net.add(final_linear)
         else:
@@ -77,4 +77,5 @@ class Siren(tf.keras.Model):
 
     def call(self, coords):
         output = self.net(coords)
+
         return output
